@@ -1,0 +1,49 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(6, 50px);
+    gap: 10px;
+    
+}
+.container div {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+}
+.container div:nth-child(4n + 3) {
+    background-color: red;
+}
+.container div:nth-last-child(-n+4):not(:nth-child(4n + 3)) {
+    background-color: blue;
+} 
+
+.btn {
+    display: inline-block;
+    width: 494px;
+    height: 92px;
+    background-color: rgb(33, 250, 250);
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+}
+.btn_wrap::after{
+    content: "";
+    display: inline-block;
+    margin: 0 20px;
+    width: 200px;
+    height: 1px;
+    background-color: gray;
+
+}
+.btn_wrap::before {
+    content: "";
+    display: inline-block;
+    width: 200px; /* Товщина лінії */
+    height: 1px;
+    background-color: gray;
+    margin: 0 20px; /* Відстань між лінією і кнопкою */
+   position: relative;
+}
